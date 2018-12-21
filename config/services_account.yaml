@@ -1,0 +1,12 @@
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Acme\Account\UseCase\:
+        resource: '../packages/Acme/Account/src/UseCase/*'
+
+    Acme\Account\Model\AccountRepository: '@App\Repository\AccountRepository'
+    Acme\Account\Model\HistoryRepository: '@App\Repository\HistoryRepository'
+
